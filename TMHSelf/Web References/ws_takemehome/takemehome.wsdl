@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://www.dataworksplus.com/TakeMeHome" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" targetNamespace="http://www.dataworksplus.com/TakeMeHome" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.dataworksplus.com/TakeMeHome">
+      <s:element name="SaveRecord">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FileId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FieldTags" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="FieldVals" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReplyMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SaveRecordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SaveRecordResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReplyMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveImage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FileId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Image" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReplyMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveImageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SaveImageResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReplyMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SaveRecordSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveRecord" />
+  </wsdl:message>
+  <wsdl:message name="SaveRecordSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveImageSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveImage" />
+  </wsdl:message>
+  <wsdl:message name="SaveImageSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveImageResponse" />
+  </wsdl:message>
+  <wsdl:portType name="TakeMeHomeSoap">
+    <wsdl:operation name="SaveRecord">
+      <wsdl:input message="tns:SaveRecordSoapIn" />
+      <wsdl:output message="tns:SaveRecordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveImage">
+      <wsdl:input message="tns:SaveImageSoapIn" />
+      <wsdl:output message="tns:SaveImageSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TakeMeHomeSoap" type="tns:TakeMeHomeSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SaveRecord">
+      <soap:operation soapAction="http://www.dataworksplus.com/TakeMeHome/SaveRecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveImage">
+      <soap:operation soapAction="http://www.dataworksplus.com/TakeMeHome/SaveImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TakeMeHome">
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/" />
+    <wsdl:port name="TakeMeHomeSoap" binding="tns:TakeMeHomeSoap">
+      <soap:address location="http://www.sdlaw.us/takemehome/takemehome.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
