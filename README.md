@@ -15,9 +15,6 @@ Law Enforcement users, and crime analysts can view, update, enter and approve re
 This is the main repository for all TMH records In our system.
 There is also connectivity to our Extranet established through our wide area network system if you are using a device that has connectivity to Extranet while you are out in the field not connected directly to Sheriff network.
 
-3.	We also developed a web app for our social agencies to use if people decide to go to a social agency and register through them. This module is hosted in our public facing web servers so that social agencies can access it. Social agencies do not have access to Extranet. Again, any data entered by our
-Social agencies is also transmitted to our main Extranet repository using an interface we developed for this.
-
 ## Requirements
 
 * Windows server 2012 R2 or higher with Microsoft IIS Web Server version 8 or higher
