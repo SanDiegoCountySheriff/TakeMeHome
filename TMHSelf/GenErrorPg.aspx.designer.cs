@@ -7,20 +7,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SDSD.NET.TMH
+namespace TMHSelf
 {
 
 
-    public partial class TMHPhoto
+    public partial class GenErrorPg
     {
 
         /// <summary>
-        /// form1 control.
+        /// lnkHome control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.HyperLink lnkHome;
     }
 }

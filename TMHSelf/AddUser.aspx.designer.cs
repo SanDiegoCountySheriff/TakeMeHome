@@ -7,29 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TMHSelf {
-    
-    
-    public partial class index {
-        
-        /// <summary>
-        /// PageBody control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl PageBody;
-        
-        /// <summary>
-        /// form1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
+namespace TMHSelf
+{
+
+
+    public partial class index
+    {
+
         /// <summary>
         /// msgVal control.
         /// </summary>
@@ -38,7 +22,7 @@ namespace TMHSelf {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl msgVal;
-        
+
         /// <summary>
         /// lblMsg control.
         /// </summary>
@@ -47,7 +31,7 @@ namespace TMHSelf {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblMsg;
-        
+
         /// <summary>
         /// pnlAddUser control.
         /// </summary>
@@ -56,7 +40,7 @@ namespace TMHSelf {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlAddUser;
-        
+
         /// <summary>
         /// useremail control.
         /// </summary>
@@ -65,7 +49,7 @@ namespace TMHSelf {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox useremail;
-        
+
         /// <summary>
         /// userpassword control.
         /// </summary>
@@ -74,7 +58,7 @@ namespace TMHSelf {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox userpassword;
-        
+
         /// <summary>
         /// userpasswordC control.
         /// </summary>
@@ -83,7 +67,7 @@ namespace TMHSelf {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox userpasswordC;
-        
+
         /// <summary>
         /// userpin control.
         /// </summary>
@@ -92,7 +76,7 @@ namespace TMHSelf {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox userpin;
-        
+
         /// <summary>
         /// btnCancel control.
         /// </summary>
@@ -101,7 +85,7 @@ namespace TMHSelf {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCancel;
-        
+
         /// <summary>
         /// btnAddUser control.
         /// </summary>
@@ -110,7 +94,7 @@ namespace TMHSelf {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnAddUser;
-        
+
         /// <summary>
         /// pnlindexPage control.
         /// </summary>
@@ -119,5 +103,19 @@ namespace TMHSelf {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlindexPage;
+
+        /// <summary>
+        /// Master property.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated property.
+        /// </remarks>
+        public new TMHSelf.Site Master
+        {
+            get
+            {
+                return ((TMHSelf.Site)(base.Master));
+            }
+        }
     }
 }

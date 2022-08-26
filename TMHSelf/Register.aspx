@@ -1,6 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="TMHSelf.Register" %>
 
-<!DOCTYPE html>
 
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -54,7 +53,7 @@
                                 
                 </h3>
             </div>
-             <img class="img-responsive center-block" src="Content/takemehome.jpg" alt="Take Me Home Registration Portal" />
+             <img class="img-responsive center-block" src="Content/new-tmh-logo.png" alt="Take Me Home Registration Portal" />
            <h3>
                Welcome, you are signed in as: 
                <strong>
@@ -100,7 +99,7 @@
                     <span class="text-danger">*Last Name:</span>
                 </label>                          
                 <div class="col-md-8">
-                    <asp:TextBox runat="server" TextMode="SingleLine" MaxLength="15" ID="txtLastName" cssclass="form-control required"></asp:TextBox>
+                    <asp:TextBox runat="server" TextMode="SingleLine" MaxLength="15" ID="txtLastName" cssclass="form-control required" onchange="cleanupInput(document.getElementById('txtLastName'))"></asp:TextBox>
                 </div>  
                 <div class="col-md-2">                 
                 </div>                      
@@ -110,7 +109,7 @@
                     <span class="text-danger">*First Name:</span>
                 </label>                          
                 <div class="col-md-8">
-                    <asp:TextBox runat="server" MaxLength="14" ID="txtFirstName" cssclass="form-control required"></asp:TextBox> 
+                    <asp:TextBox runat="server" MaxLength="14" ID="txtFirstName" cssclass="form-control required" onchange="cleanupInput(document.getElementById('txtFirstName'))"></asp:TextBox> 
                 </div>  
                 <div class="col-md-2">                 
                 </div>                      
@@ -120,7 +119,7 @@
                     Middle Name:
                 </label>                          
                 <div class="col-md-8">
-                    <asp:TextBox runat="server" MaxLength="14" ID="txtMiddleName" cssclass="form-control"></asp:TextBox>
+                    <asp:TextBox runat="server" MaxLength="14" ID="txtMiddleName" cssclass="form-control" onchange="cleanupInput(document.getElementById('txtMiddleName'))"></asp:TextBox>
                 </div>  
                 <div class="col-md-2">                 
                 </div>                      
@@ -140,7 +139,7 @@
                     <span class="text-danger">*Name To Call Me:</span>
                 </label>                          
                 <div class="col-md-8">
-                    <asp:TextBox runat="server" ID="txtNameToCallMe" MaxLength="50" cssclass="form-control required"></asp:TextBox>
+                    <asp:TextBox runat="server" ID="txtNameToCallMe" MaxLength="50" cssclass="form-control required" onchange="cleanupInput(document.getElementById('txtNameToCallMe'))"></asp:TextBox>
                 </div>  
                 <div class="col-md-2">                 
                 </div>                      
@@ -175,7 +174,7 @@
                     <span class="text-danger">*Address Number:</span>
                 </label>                          
                 <div class="col-md-8">
-                    <asp:TextBox runat="server" ID="txtAddressNumber" MaxLength="10" cssclass="form-control required"></asp:TextBox>
+                    <asp:TextBox runat="server" ID="txtAddressNumber" MaxLength="10" cssclass="form-control required" onchange="cleanupInput(document.getElementById('txtAddressNumber'))"></asp:TextBox>
                 </div>  
                 <div class="col-md-2">                 
                 </div>                      
@@ -185,7 +184,7 @@
                     <span class="text-danger">*Address Street:</span>
                 </label>                          
                 <div class="col-md-8">
-                    <asp:TextBox runat="server" ID="txtAddressStreet" MaxLength="30" cssclass="form-control required"></asp:TextBox>
+                    <asp:TextBox runat="server" ID="txtAddressStreet" MaxLength="30" cssclass="form-control required" onchange="cleanupInput(document.getElementById('txtAddressStreet'))"></asp:TextBox>
                 </div>  
                 <div class="col-md-2">                 
                 </div>                      
@@ -231,7 +230,7 @@
                     <span class="text-danger">*Zip Code:</span>
                 </label>                          
                 <div class="col-md-8">
-                    <asp:TextBox runat="server" ID="txtZipCode" MaxLength="10" cssclass="form-control required" ToolTip="99999 or 99999-9999"></asp:TextBox>
+                    <asp:TextBox runat="server" ID="txtZipCode" MaxLength="10" cssclass="form-control required" ToolTip="99999 or 99999-9999" onchange="cleanupInput(document.getElementById('txtZipCode'))"></asp:TextBox>
                 </div>  
                 <div class="col-md-2">
                     99999 or 99999-9999
@@ -339,7 +338,7 @@
                     Weight:
                 </label>                          
                 <div class="col-md-8">
-                    <asp:TextBox runat="server" ID="txtWeight" MaxLength="3" type="number" cssclass="form-control"></asp:TextBox>
+                    <asp:TextBox runat="server" ID="txtWeight" MaxLength="3" type="number" cssclass="form-control" onchange="cleanupInput(document.getElementById('txtWeight'))"></asp:TextBox>
                 </div>  
                 <div class="col-md-2">  lbs               
                 </div>                      
@@ -418,7 +417,7 @@
                     Spoken Languages:
                 </label>                          
                 <div class="col-md-8">
-                    <asp:TextBox ID="txtLanguages" runat="server" TextMode="MultiLine"  MaxLength="250" cssclass="form-control" ></asp:TextBox>
+                    <asp:TextBox ID="txtLanguages" runat="server" TextMode="MultiLine"  MaxLength="250" cssclass="form-control" onchange="cleanupInput(document.getElementById('txtLanguages'))" ></asp:TextBox>
                 </div>  
                 <div class="col-md-2">                 
                 </div>                      
@@ -428,7 +427,7 @@
                     Medical/Psych Issues:
                 </label>                          
                 <div class="col-md-8">
-                    <asp:TextBox ID="txtMedical" runat="server" TextMode="MultiLine" MaxLength="250" cssclass="form-control" ></asp:TextBox>
+                    <asp:TextBox ID="txtMedical" runat="server" TextMode="MultiLine" MaxLength="250" cssclass="form-control" onchange="cleanupInput(document.getElementById('txtMedical'))" ></asp:TextBox>
                 </div>  
                 <div class="col-md-2">                 
                 </div>                      
@@ -438,7 +437,7 @@
                     Commonly Worn Items:
                 </label>                          
                 <div class="col-md-8">
-                    <asp:TextBox ID="txtWornItems" runat="server" TextMode="MultiLine" MaxLength="250" cssclass="form-control" ></asp:TextBox>
+                    <asp:TextBox ID="txtWornItems" runat="server" TextMode="MultiLine" MaxLength="250" cssclass="form-control" onchange="cleanupInput(document.getElementById('txtWornItems'))" ></asp:TextBox>
                 </div>  
                 <div class="col-md-2">                 
                 </div>                      
@@ -448,7 +447,7 @@
                     Approach Suggestions:
                 </label>                          
                 <div class="col-md-8">
-                    <asp:TextBox ID="txtApproach" runat="server" TextMode="MultiLine" MaxLength="250" cssclass="form-control" ></asp:TextBox>               
+                    <asp:TextBox ID="txtApproach" runat="server" TextMode="MultiLine" MaxLength="250" cssclass="form-control" onchange="cleanupInput(document.getElementById('txtApproach'))" ></asp:TextBox>               
                 </div>  
                 <div class="col-md-2">                 
                 </div>                      
@@ -458,7 +457,7 @@
                     Noted Behaviors:
                 </label>                          
                 <div class="col-md-8">
-                    <asp:TextBox ID="txtBehaviors" runat="server" TextMode="MultiLine" MaxLength="250" cssclass="form-control" ></asp:TextBox>
+                    <asp:TextBox ID="txtBehaviors" runat="server" TextMode="MultiLine" MaxLength="250" cssclass="form-control" onchange="cleanupInput(document.getElementById('txtBehaviors'))" ></asp:TextBox>
                 </div>  
                 <div class="col-md-2"></div>                    
             </div>                       
@@ -489,7 +488,7 @@
                     <span class="text-danger">*Full Name:</span>
                 </label>                          
                 <div class="col-md-8">
-                    <asp:TextBox ID="txtContactFullName" runat="server" cssclass="form-control required" MaxLength="50"  ToolTip="FirstName LastName"></asp:TextBox>
+                    <asp:TextBox ID="txtContactFullName" runat="server" cssclass="form-control required" MaxLength="50"  ToolTip="FirstName LastName" onchange="cleanupInput(document.getElementById('txtContactFullName'))"></asp:TextBox>
                 </div>  
                 <div class="col-md-2">FirstName LastName                   
                 </div>                      
@@ -499,7 +498,7 @@
                     <span class="text-danger">*Address:</span>
                 </label>                          
                 <div class="col-md-8">
-                    <asp:TextBox ID="txtContactAddress" cssclass="form-control required" runat="server" MaxLength="50" ></asp:TextBox>
+                    <asp:TextBox ID="txtContactAddress" cssclass="form-control required" runat="server" MaxLength="50" onchange="cleanupInput(document.getElementById('txtContactAddress'))" ></asp:TextBox>
                 </div>  
                 <div class="col-md-2">                 
                 </div>                      
@@ -509,7 +508,7 @@
                     <span class="text-danger">*City:</span>
                 </label>                          
                 <div class="col-md-8">
-                    <asp:TextBox ID="txtContactCity" cssclass="form-control required" runat="server" MaxLength="24"></asp:TextBox>
+                    <asp:TextBox ID="txtContactCity" cssclass="form-control required" runat="server" MaxLength="24" onchange="cleanupInput(document.getElementById('txtContactCity'))"></asp:TextBox>
                 </div>  
                 <div class="col-md-2">                 
                 </div>                      
@@ -529,7 +528,7 @@
                     <span class="text-danger">*Zip:</span>
                 </label>                          
                 <div class="col-md-8">
-                    <asp:TextBox ID="txtContactZip" cssclass="form-control required" runat="server" MaxLength="10" ToolTip="99999 or 99999-9999" ></asp:TextBox>
+                    <asp:TextBox ID="txtContactZip" cssclass="form-control required" runat="server" MaxLength="10" ToolTip="99999 or 99999-9999" onchange="cleanupInput(document.getElementById('txtContactZip'))" ></asp:TextBox>
                 </div>  
                 <div class="col-md-2">  99999 or 99999-9999               
                 </div>                      
@@ -578,7 +577,7 @@
                     Email:
                 </label>                          
                 <div class="col-md-8">
-                    <asp:TextBox ID="txtContactEMail" cssclass="form-control" runat="server" MaxLength="100" ></asp:TextBox>
+                    <asp:TextBox ID="txtContactEMail" cssclass="form-control" runat="server" MaxLength="100" onchange="cleanupInput(document.getElementById('txtContactEMail'))" ></asp:TextBox>
                 </div>  
                 <div class="col-md-2">                 
                 </div>                      
@@ -601,7 +600,7 @@
                     Full Name:
                 </label>                          
                 <div class="col-md-8">
-                    <asp:TextBox ID="txtContactFullName2" cssclass="form-control" runat="server" MaxLength="50"  ToolTip="FirstName LastName"></asp:TextBox>
+                    <asp:TextBox ID="txtContactFullName2" cssclass="form-control" runat="server" MaxLength="50"  ToolTip="FirstName LastName" onchange="cleanupInput(document.getElementById('txtContactFullName2'))"></asp:TextBox>
                 </div>  
                 <div class="col-md-2"> FirstName LastName                 
                 </div>                      
@@ -611,7 +610,7 @@
                     Address:
                 </label>                          
                 <div class="col-md-8">
-                    <asp:TextBox ID="txtContactAddress2" cssclass="form-control" runat="server" MaxLength="50" ></asp:TextBox>
+                    <asp:TextBox ID="txtContactAddress2" cssclass="form-control" runat="server" MaxLength="50" onchange="cleanupInput(document.getElementById('txtContactAddress2'))" ></asp:TextBox>
                 </div>  
                 <div class="col-md-2">                 
                 </div>                      
@@ -621,7 +620,7 @@
                     City:
                 </label>                          
                 <div class="col-md-8">
-                    <asp:TextBox ID="txtContactCity2" cssclass="form-control" runat="server" MaxLength="24"></asp:TextBox>
+                    <asp:TextBox ID="txtContactCity2" cssclass="form-control" runat="server" MaxLength="24" onchange="cleanupInput(document.getElementById('txtContactCity2'))"></asp:TextBox>
                 </div>  
                 <div class="col-md-2">                 
                 </div>                      
@@ -641,7 +640,7 @@
                     Zip:
                 </label>                          
                 <div class="col-md-8">
-                        <asp:TextBox ID="txtContactZip2" cssclass="form-control" runat="server" MaxLength="10" ToolTip="99999 or 99999-9999" ></asp:TextBox>
+                        <asp:TextBox ID="txtContactZip2" cssclass="form-control" runat="server" MaxLength="10" ToolTip="99999 or 99999-9999" onchange="cleanupInput(document.getElementById('txtContactZip2'))" ></asp:TextBox>
                 </div>  
                 <div class="col-md-2">99999 or 99999-9999                  
                 </div>                      
@@ -681,7 +680,7 @@
                     Email:
                 </label>                          
                 <div class="col-md-8">
-                    <asp:TextBox ID="txtContactEMail2" cssclass="form-control" runat="server" MaxLength="100" ></asp:TextBox>
+                    <asp:TextBox ID="txtContactEMail2" cssclass="form-control" runat="server" MaxLength="100" onchange="cleanupInput(document.getElementById('txtContactEMail2'))" ></asp:TextBox>
                 </div>  
                 <div class="col-md-2">                 
                 </div>                      
@@ -703,7 +702,7 @@
                                 <li>Front facing picture</li>
                                 <li>Clearly visible eyes</li>
                                 <li>Images Only (.jpg & .gif)</li>
-                                <li>2MB or smaller file size recommended</li>
+                                <li>5MB or smaller file size recommended</li>
                             </ul>
                             <img src="IdealPhoto.jpg" alt="Ideal Photo" border="0" />
                             <br />Ideal Photo
@@ -740,7 +739,7 @@
                                 <div class="col-md-12">
                                     <br />
                                     <asp:Label ID="lblImage"  runat="server"></asp:Label>
-                                    <asp:TextBox ID="lblPhoto" Enabled="false"  runat="server"></asp:TextBox> 
+                                    <asp:TextBox ID="lblPhoto" Enabled="false"  runat="server" onchange="cleanupInput(document.getElementById('lblPhoto'))"></asp:TextBox> 
                                     <canvas style="display:none;" class="center-block" id="canvas"></canvas>   
                                     <p> <asp:Label ID="filesize"  runat="server"></asp:Label> </p>
                                 </div>   
@@ -815,7 +814,7 @@
                     Model:
                 </label>                          
                 <div class="col-md-8">
-                    <asp:TextBox ID="txtVehModel" cssclass="form-control" runat="server" MaxLength="20"></asp:TextBox>
+                    <asp:TextBox ID="txtVehModel" cssclass="form-control" runat="server" MaxLength="20" onchange="cleanupInput(document.getElementById('txtVehModel'))"></asp:TextBox>
                 </div>  
                 <div class="col-md-2">                 
                 </div>                      
@@ -835,7 +834,7 @@
                     Vehicle VIN:
                 </label>                          
                 <div class="col-md-8">
-                    <asp:TextBox ID="txtVehVIN" cssclass="form-control" runat="server" MaxLength="40" ></asp:TextBox>
+                    <asp:TextBox ID="txtVehVIN" cssclass="form-control" runat="server" MaxLength="40" onchange="cleanupInput(document.getElementById('txtVehVIN'))" ></asp:TextBox>
                 </div>  
                 <div class="col-md-2">                 
                 </div>                      
@@ -845,7 +844,7 @@
                     Vehicle Lic. #:
                 </label>                          
                 <div class="col-md-8">
-                    <asp:TextBox ID="txtVehLic" cssclass="form-control" runat="server" MaxLength="15"></asp:TextBox>
+                    <asp:TextBox ID="txtVehLic" cssclass="form-control" runat="server" MaxLength="15" onchange="cleanupInput(document.getElementById('txtLanguages'))"></asp:TextBox>
                 </div>  
                 <div class="col-md-2">                 
                 </div>                      
@@ -1003,6 +1002,10 @@
                   alert(msg);
               };
 
+              function cleanupInput(text) {
+                  var x = text
+                  x.value = x.value.replace(/[<>%=\(\)\{\}:?;!]/g, "");
+              }
               function checkLength(text, min, max) {
                   min = min || 1;
                   max = max || 10000;
@@ -1103,16 +1106,17 @@
               </p>
               */
 
-        </script>
+          </script>
     
-    <script src="Scripts/jquery-1.10.2.min.js"></script>
+    <script src="Scripts/jquery-3.6.0.min.js"></script>
     <script src="Scripts/megapix-image.js"></script>
     <script src="Scripts/binaryajax.js"></script>
     <script src="Scripts/exif.js"></script>
   <%--  <link href="Content/jquery.Jcrop.min.css" rel="stylesheet" />
     <script src="Scripts/jquery.Jcrop.min.js"></script>--%>
     <script src="Scripts/bootstrap.inputmask.min.js"></script>
-    <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=true"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=true&key=AIzaSyCYZ3aQMXk0t7olKJtvXq3jTdPFetAc4HY"></script>
+
     <script>
 
         $('#btnSubmit').click(function () {

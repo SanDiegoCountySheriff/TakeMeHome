@@ -1,21 +1,12 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="signout.aspx.cs" Inherits="TMHSelf.signout" %>
+﻿<%@ Page Title="- Session Sign Out" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="signout.aspx.cs" Inherits="TMHSelf.signout" %>
+<%@ MasterType VirtualPath="~/Site.Master" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>TMHSelf - Session Sign Out</title>
-        <script>
+    <script>
 			document.execCommand("ClearAuthenticationCache")
 			//window.close();
 	</script>
-
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
     
-    </div>
-    </form>
-</body>
-</html>
+</asp:Content>
+

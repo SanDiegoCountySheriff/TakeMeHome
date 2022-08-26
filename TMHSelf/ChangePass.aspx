@@ -49,7 +49,7 @@
         <h1 class="text-info">You are using an <strong>outdated</strong> browser or running your browser in an outdated mode. Please <a href="http://browsehappy.com/?locale=en/">upgrade your browser</a> to improve your experience on this site.</h1>
         <![endif]-->      
          <a href="default.aspx" title="Take Me Home Main Page">
-        <img class="img-responsive center-block" src="Content/takemehome.jpg" alt="Take Me Home Registration Portal" /></a>
+        <img class="img-responsive center-block" src="Content/new-tmh-logo.png" alt="Take Me Home Registration Portal" /></a>
 
          <form id="form1" runat="server" class="form-horizontal">               
             <h1>TMH Self-Registry, Change Password!</h1>
@@ -146,7 +146,7 @@
         </form>
     </div>
 
-        <script src="Scripts/jquery-1.10.2.min.js"></script>
+        <script src="Scripts/jquery-3.6.0.min.js"></script>
         
    <script src="Scripts/pwstrength.js"></script>
     <script>

@@ -7,29 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TMHSelf {
-    
-    
-    public partial class MyAccount {
-        
-        /// <summary>
-        /// PageBody control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl PageBody;
-        
-        /// <summary>
-        /// form1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
+namespace TMHSelf
+{
+
+
+    public partial class MyAccount
+    {
+
         /// <summary>
         /// msgVal control.
         /// </summary>
@@ -38,7 +22,7 @@ namespace TMHSelf {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl msgVal;
-        
+
         /// <summary>
         /// lblMsg control.
         /// </summary>
@@ -47,7 +31,7 @@ namespace TMHSelf {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblMsg;
-        
+
         /// <summary>
         /// urlChgPass control.
         /// </summary>
@@ -56,7 +40,7 @@ namespace TMHSelf {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor urlChgPass;
-        
+
         /// <summary>
         /// useremail1 control.
         /// </summary>
@@ -65,7 +49,7 @@ namespace TMHSelf {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label useremail1;
-        
+
         /// <summary>
         /// useremail control.
         /// </summary>
@@ -74,7 +58,7 @@ namespace TMHSelf {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox useremail;
-        
+
         /// <summary>
         /// userpin1 control.
         /// </summary>
@@ -83,7 +67,7 @@ namespace TMHSelf {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label userpin1;
-        
+
         /// <summary>
         /// userpin control.
         /// </summary>
@@ -92,7 +76,7 @@ namespace TMHSelf {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox userpin;
-        
+
         /// <summary>
         /// btnCancel control.
         /// </summary>
@@ -101,7 +85,7 @@ namespace TMHSelf {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCancel;
-        
+
         /// <summary>
         /// btnUpdate control.
         /// </summary>
@@ -110,5 +94,19 @@ namespace TMHSelf {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnUpdate;
+
+        /// <summary>
+        /// Master property.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated property.
+        /// </remarks>
+        public new TMHSelf.Site Master
+        {
+            get
+            {
+                return ((TMHSelf.Site)(base.Master));
+            }
+        }
     }
 }

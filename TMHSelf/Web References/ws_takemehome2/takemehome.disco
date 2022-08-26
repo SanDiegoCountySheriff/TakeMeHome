@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://www.sdlaw.us/takemehome2/takemehome.asmx?wsdl" docRef="http://www.sdlaw.us/takemehome2/takemehome.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://www.sdlaw.us/takemehome2/takemehome.asmx" xmlns:q1="http://www.dataworksplus.com/TakeMeHome" binding="q1:TakeMeHomeSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://www.sdlaw.us/takemehome2/takemehome.asmx" xmlns:q2="http://www.dataworksplus.com/TakeMeHome" binding="q2:TakeMeHomeSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

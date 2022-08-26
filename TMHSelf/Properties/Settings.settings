@@ -3,13 +3,16 @@
   <Profiles />
   <Settings>
     <Setting Name="SMTP_Server" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">10.150.5.18</Value>
+      <Value Profile="(Default)">mxob.sdsheriff.net</Value>
     </Setting>
     <Setting Name="TMHUrl" Type="System.String" Scope="Application">
       <Value Profile="(Default)">https://apps.sdsheriff.net/TMHSelf/TMHLogin.aspx</Value>
     </Setting>
     <Setting Name="TMHSelf_ws_takemehome_TakeMeHome" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">https://www.sdlaw.us/takemehome/takemehome.asmx</Value>
+    </Setting>
+    <Setting Name="TMHSelf_ws_takemehome2_TakeMeHome" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://www.sdlaw.us/takemehome2/takemehome.asmx</Value>
     </Setting>
   </Settings>
 </SettingsFile>

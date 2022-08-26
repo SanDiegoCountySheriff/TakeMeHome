@@ -7,20 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TMHSelf {
-    
-    
-    public partial class _default {
-        
-        /// <summary>
-        /// PageBody control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl PageBody;
-        
+namespace TMHSelf
+{
+
+
+    public partial class _default
+    {
+
         /// <summary>
         /// lblUser control.
         /// </summary>
@@ -29,7 +22,7 @@ namespace TMHSelf {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblUser;
-        
+
         /// <summary>
         /// lblCurrDtTm control.
         /// </summary>
@@ -38,7 +31,7 @@ namespace TMHSelf {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblCurrDtTm;
-        
+
         /// <summary>
         /// lblMsg control.
         /// </summary>
@@ -47,7 +40,7 @@ namespace TMHSelf {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblMsg;
-        
+
         /// <summary>
         /// pnlRecList control.
         /// </summary>
@@ -56,7 +49,7 @@ namespace TMHSelf {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlRecList;
-        
+
         /// <summary>
         /// lblLimit control.
         /// </summary>
@@ -65,7 +58,7 @@ namespace TMHSelf {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblLimit;
-        
+
         /// <summary>
         /// lblRegCount control.
         /// </summary>
@@ -74,7 +67,7 @@ namespace TMHSelf {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblRegCount;
-        
+
         /// <summary>
         /// urlRegister control.
         /// </summary>
@@ -83,7 +76,7 @@ namespace TMHSelf {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor urlRegister;
-        
+
         /// <summary>
         /// lblRecords control.
         /// </summary>

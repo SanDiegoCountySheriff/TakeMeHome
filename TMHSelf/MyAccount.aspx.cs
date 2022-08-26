@@ -20,7 +20,7 @@ namespace TMHSelf
         {
             if (!IsPostBack)
             {
-                PageBody.Attributes.Add("onload", "javascript:form1.useremail.focus()");
+                Master.PagebodyAccess.Attributes.Add("onload", "javascript:form1.useremail.focus()");
                 useremail1.Text = HttpContext.Current.Session["TMHUser"].ToString();
                 userpin1.Text = HttpContext.Current.Session["TMHUserPIN"].ToString();
             }

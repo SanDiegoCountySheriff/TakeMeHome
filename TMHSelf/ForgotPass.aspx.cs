@@ -21,7 +21,7 @@ namespace TMHSelf
             lblMsg.Text = "Please use this form to receive a temporary password.";
             if (!IsPostBack)
             {
-                PageBody.Attributes.Add("onload", "javascript:form1.useremail.focus()");
+                Master.PagebodyAccess.Attributes.Add("onload", "javascript:form1.useremail.focus()");
             }
         }
 
@@ -89,7 +89,8 @@ namespace TMHSelf
                 mm.Body = mm.Body + (char)13 + (char)12;
                 mm.Body = mm.Body + "Your Take Me Home Self-Registry password has been reset. Your new password is: " + strNewPass + (char)13 + (char)12;
                 mm.Body = mm.Body + "This password will allow you to login and then require you to set a new password. ";
-                mm.Body = mm.Body + "Login at: " + Properties.Settings.Default.TMHUrl;
+                //mm.Body = mm.Body + "Login at: " + Properties.Settings.Default.TMHUrl;
+                mm.Body = mm.Body + "Login at: https://apps.sdsheriff.net/TMHSelf/TMHLogin.aspx";
                 mm.Body = mm.Body + (char)13 + (char)12;
                 mm.Body = mm.Body + "Copy and paste the password from this email into the login form. ";
                 mm.Body = mm.Body + "You will then be asked to change your password and you should paste the ";

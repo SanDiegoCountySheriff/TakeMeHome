@@ -21,7 +21,7 @@ namespace TMHSelf
         {
             if (!IsPostBack)
             {
-                PageBody.Attributes.Add("onload", "javascript:form1.useremail.focus()");
+                Master.PagebodyAccess.Attributes.Add("onload", "javascript:form1.useremail.focus()");
             }
 
             lblMsg.Text = "Please fill out the form to create a new account.";

@@ -148,8 +148,12 @@ namespace TMHSelf
                 strFieldVals[1] = strUserID;
                 strFieldVals[2] = strDTSubmitted;
 
-                // consume the web service provided by DataWorks at https://vemugiis003.sdlaw.us/takemehome/takemehome.asmx
-                ws_takemehome.TakeMeHome ws1 = new ws_takemehome.TakeMeHome();
+                // consume the web service provided by DataWorks at https://www.sdlaw.us/takemehome/takemehome.asmx // vemugiis003
+                //ws_takemehome.TakeMeHome ws1 = new ws_takemehome.TakeMeHome();
+                // consume the web service provided by DataWorks at https://www.sdlaw.us/takemehome/takemehome.asmx // vemugiis104
+                ws_takemehome2.TakeMeHome ws1 = new ws_takemehome2.TakeMeHome();
+                ws1.Url = "https://www.sdlaw.us/takemehome2/takemehome.asmx";
+
                 string strReturnMsg = "";
                 // submit the record first, returns 0 - success, 1 - Fail
                 int iResult1 = ws1.SaveRecord(gid.ToString(), gPhotoGuid.ToString(), strFieldTags, strFieldVals, ref strReturnMsg);
@@ -672,7 +676,7 @@ namespace TMHSelf
                     else
                     {
                         msgVal.Attributes["class"] = "alert alert-danger";
-                        lblMsg.Text = "Only jpg, jpeg, png, or gif files less than 2 Mega Bytes may be uploaded.";
+                        lblMsg.Text = "Only jpg, jpeg, png, or gif files less than 5 Mega Bytes may be uploaded.";
                         return false;
                     }
                 }
@@ -1006,8 +1010,12 @@ namespace TMHSelf
                         return false;
                     }
 
-                    // consume the web service provided by DataWorks at https://vemugiis003.sdlaw.us/takemehome/takemehome.asmx
-                    ws_takemehome.TakeMeHome ws1 = new ws_takemehome.TakeMeHome();
+                    // consume the web service provided by DataWorks at https://www.sdlaw.us/takemehome/takemehome.asmx //vemugiis003
+                    //ws_takemehome.TakeMeHome ws1 = new ws_takemehome.TakeMeHome();
+                    // consume the web service provided by DataWorks at https://www.sdlaw.us/takemehome/takemehome.asmx //vemugiis104
+                    ws_takemehome2.TakeMeHome ws1 = new ws_takemehome2.TakeMeHome();
+                ws1.Url = "https://www.sdlaw.us/takemehome2/takemehome.asmx";
+
                     string strReturnMsg = "";
                     // submit the record first, returns 0 - success, 1 - Fail
                     iResult1 = ws1.SaveRecord(gid.ToString(), gPhotoGuid.ToString(), strFieldTags, strFieldVals, ref strReturnMsg);
@@ -1069,7 +1077,7 @@ namespace TMHSelf
         // check file size and file type
         protected bool bIsFileTypeOk(string strFileName, int iFileSize)
         {
-            if (iFileSize > 2097152) return false; // 2 MB limit
+            if (iFileSize > 5242880) return false; // 5 MB limit
             bool bFileOK = false;
             String FileExtension = Path.GetExtension(strFileName.ToLower());
             String[] allowedExtensions = { ".jpeg", ".jpg", ".gif", ".png" };

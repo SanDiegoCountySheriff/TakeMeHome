@@ -29,10 +29,10 @@ namespace TMHSelf
                 if (LoginCookie != null)
                 {
                     useremail.Text = LoginCookie["UserName"].ToString();
-                    PageBody.Attributes.Add("onload", "javascript:form1.userpassword.focus()");
+                    Master.PagebodyAccess.Attributes.Add("onload", "javascript:form1.userpassword.focus()");
                 }
                 
-                else PageBody.Attributes.Add("onload", "javascript:form1.useremail.focus()");
+                else Master.PagebodyAccess.Attributes.Add("onload", "javascript:form1.useremail.focus()");
 
                 lblMsg.Text = "";
                 HttpContext.Current.Session["TMHPasswordAccess"] = "";

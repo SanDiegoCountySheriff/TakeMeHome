@@ -13,7 +13,7 @@
 // 
 #pragma warning disable 1591
 
-namespace TMHSelf.ws_takemehome {
+namespace TMHSelf.ws_takemehome2 {
     using System;
     using System.Web.Services;
     using System.Diagnostics;
